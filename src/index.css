@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+  --mc-dark-bg: #1e1e1e;
+  --mc-btn-bg: #d3d3d3;
+  --mc-btn-border-light: #ffffff;
+  --mc-btn-border-dark: #585858;
+  --mc-text-shadow: 2px 2px 0px #3f3f3f;
+  --mc-green: #52a537;
+  --mc-dirt: #5c4033;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'VT323', monospace;
+  image-rendering: pixelated;
+  user-select: none;
+  cursor: url('/minecraft_cursor.png'), auto;
+}
+
+
+a,
+button,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+.mc-button,
+.back-button,
+.server-entry,
+.inventory-slot,
+.inventory-slot:hover {
+  cursor: url('/minecraft_cursor.png'), pointer !important;
+}
+
+body {
+  background-color: #050505;
+  color: white;
+  overflow-y: auto;
+  /* Allow scrolling content */
+  height: 100%;
+  /* Use 100% instead of fixed 100vh for scroll */
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/background.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(0.9);
+  z-index: -2;
+  transform: scale(1.1);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes subtle-shift {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 128px 128px;
+  }
+}
+
+
+.mc-button {
+  background-color: #787878;
+  border: 2px solid #000;
+  border-top-color: #aaa;
+  border-left-color: #aaa;
+  border-bottom-color: #555;
+  border-right-color: #555;
+  color: #fff;
+  font-size: 24px;
+  padding: 10px 0;
+  width: 400px;
+  text-align: center;
+  margin: 10px auto;
+  cursor: pointer;
+  text-shadow: 2px 2px #000;
+  position: relative;
+  display: block;
+  text-decoration: none;
+}
+
+.mc-button:hover {
+  background-color: #6a6a6a;
+  border-top-color: #888;
+  border-left-color: #888;
+  border-bottom-color: #333;
+  border-right-color: #333;
+  color: #ffffa0;
+}
+
+.mc-button:active {
+  border-top-color: #333;
+  border-left-color: #333;
+  border-bottom-color: #aaa;
+  border-right-color: #aaa;
+}
+
+.screen-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+h1.mc-logo {
+  font-size: 72px;
+  color: #b7b7b7;
+  text-shadow: 4px 4px 0px #3f3f3f;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border: 2px solid #555;
+}
+
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #787878;
+  border: 2px solid #000;
+  border-top-color: #aaa;
+  border-left-color: #aaa;
+  border-bottom-color: #555;
+  border-right-color: #555;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.back-button:hover {
+  background-color: #6a6a6a;
+}

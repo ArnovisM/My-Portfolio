@@ -1,0 +1,390 @@
+.about-screen {
+    padding: 2rem;
+    padding-top: 80px;
+    /* Ensure title is not truncated by potential flex centering issues */
+    overflow-y: auto;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* Override .screen-container center alignment */
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    z-index: 10;
+}
+
+.page-title {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 0 #000;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+
+.inventory-container {
+    background-color: #c6c6c6;
+    border: 4px solid #000;
+    border-top-color: #fff;
+    border-left-color: #fff;
+    border-right-color: #555;
+    border-bottom-color: #555;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: fit-content;
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.5);
+    image-rendering: pixelated;
+}
+
+
+.inventory-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 60px;
+}
+
+
+.character-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.character-title {
+    display: none;
+}
+
+.crafting-title {
+    font-size: 20px;
+    color: #404040;
+    margin-bottom: 5px;
+}
+
+
+.character-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+
+.armor-slots {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 180px;
+    width: 40px;
+    padding-bottom: 0px;
+}
+
+.armor-slot {
+    width: 40px;
+    height: 40px;
+    background-color: #8b8b8b;
+    border: 2px solid #373737;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.armor-slot img {
+    width: 32px;
+    height: 32px;
+}
+
+
+.character-content {
+    background-color: #000;
+    width: 140px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #373737;
+    border-bottom-color: #fff;
+    border-right-color: #fff;
+    overflow: hidden;
+}
+
+.character-preview {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.character-model {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.character-image {
+    height: 95%;
+    width: auto;
+    object-fit: contain;
+    image-rendering: pixelated;
+    z-index: 1;
+}
+
+
+.offhand-slot {
+    width: 40px;
+    height: 40px;
+    background-color: #8b8b8b;
+    border: 2px solid #373737;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.offhand-slot img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    transform: scale(7.0);
+}
+
+
+
+.crafting-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.crafting-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.crafting-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+}
+
+.crafting-arrow {
+    font-size: 32px;
+    color: #404040;
+}
+
+
+.inventory-slot {
+    width: 50px;
+    height: 50px;
+    background-color: #8b8b8b;
+    border: 3px solid #373737;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.inventory-slot:hover {
+    background-color: #a0a0a0;
+    cursor: pointer;
+}
+
+.inventory-slot.filled:hover {
+    background-color: #a0a0a0;
+}
+
+.item-image {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.item-icon {
+    font-size: 24px;
+    color: white;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.item-name {
+    display: none;
+    position: absolute;
+    bottom: -25px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 100;
+    pointer-events: none;
+    border: 1px solid #fff;
+}
+
+.inventory-slot:hover .item-name {
+    display: block;
+}
+
+
+
+.inventory-main {
+    margin-top: 10px;
+}
+
+.inventory-grid.main-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 6px;
+}
+
+
+.inventory-hotbar {
+    margin-top: 10px;
+}
+
+.inventory-grid.hotbar-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 6px;
+}
+
+
+
+.bio-section {
+    margin-top: 2rem;
+    max-width: 900px;
+    width: 95%;
+}
+
+.book-page {
+    background-color: #f4e4bc;
+    border: 2px solid #6b4e31;
+    padding: 30px;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.3);
+    color: #3f2e1a;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.book-page p {
+    margin-bottom: 1.5rem;
+}
+
+.book-page h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #6b4e31;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+
+/* Responsiveness */
+/* Responsiveness */
+@media (max-width: 768px) {
+    .about-screen {
+        padding: 0 20px !important;
+        /* Reset side padding to standard */
+        padding-top: 130px !important;
+        /* Force title visibility */
+        padding-bottom: 100px !important;
+        justify-content: flex-start !important;
+        height: auto !important;
+        min-height: 100vh !important;
+        overflow-y: scroll !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .inventory-container {
+        zoom: 0.95;
+        /* Maximize size */
+        width: 100% !important;
+        /* Fill container */
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        margin-bottom: 2rem !important;
+        // margin-top: 40px !important; /* Removed to avoid excessive gaps with new padding */
+
+        overflow-x: visible;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        height: auto;
+    }
+
+    /* Force 9-column standard Minecraft layout on mobile */
+    .inventory-grid.main-grid,
+    .inventory-grid.hotbar-grid {
+        grid-template-columns: repeat(9, 1fr) !important;
+        /* 9 columns fit width */
+        gap: 2px !important;
+        /* Reduce gap to save space */
+        justify-content: center;
+    }
+
+    /* Slots scaling for mobile 9-col */
+    .inventory-slot {
+        width: auto !important;
+        /* Allow shrinking */
+        height: auto !important;
+        aspect-ratio: 1/1;
+        /* Keep them square */
+        min-width: 0;
+        /* Allow Flex/Grid shrinking */
+    }
+
+    .item-image {
+        width: 80% !important;
+        /* Scale content inside */
+        height: 80% !important;
+    }
+
+    /* Fallback for browsers that don't support zoom (like Firefox) */
+    @supports not (zoom: 1) {
+        .inventory-container {
+            transform: scale(0.65);
+            transform-origin: top center;
+            margin-bottom: -150px;
+        }
+    }
+
+    .inventory-top {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+    }
+
+    .character-row {
+        justify-content: center !important;
+    }
+
+    .bio-section {
+        width: 100% !important;
+        margin-top: 2rem !important;
+        margin-bottom: 60px !important;
+    }
+
+    .book-page {
+        padding: 20px !important;
+        font-size: 1rem !important;
+    }
+}

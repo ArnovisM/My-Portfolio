@@ -1,0 +1,53 @@
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Increased gap for better touch targets */
+    width: 100%;
+    align-items: center;
+    /* Center buttons horizontally */
+}
+
+.splash-text {
+    position: absolute;
+    top: 20%;
+    right: 15%;
+    color: #ffff00;
+    font-size: 20px;
+    transform: rotate(-20deg);
+    text-shadow: 2px 2px 0px #000;
+    animation: splash-bounce 1s ease-in-out infinite alternate;
+}
+
+@keyframes splash-bounce {
+    from {
+        transform: rotate(-20deg) translateY(0px);
+    }
+
+    to {
+        transform: rotate(-20deg) translateY(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .mc-button {
+        width: 85% !important;
+        /* Force width on mobile */
+        max-width: 400px;
+        font-size: 22px;
+        /* Slightly larger text */
+        padding: 15px 0;
+        /* Taller buttons */
+    }
+
+
+    h1.mc-logo {
+        font-size: 48px;
+    }
+
+    .splash-text {
+        font-size: 16px;
+        top: 15%;
+        right: 10%;
+    }
+}
