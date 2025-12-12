@@ -3,19 +3,19 @@ import { ArrowLeft } from 'lucide-react';
 import './About.css';
 
 const skills = [
-    { name: 'UiPath', slot: 0, icon: '/skills/uipath.png' },
-    { name: 'RPA Dev', slot: 1, icon: '/skills/rpa.png' },
-    { name: 'C#', slot: 2, icon: '/skills/csharp.png' },
-    { name: 'VB.NET', slot: 3, icon: '/skills/vbnet.png' },
-    { name: 'Python', slot: 4, icon: '/skills/python.png' },
-    { name: 'SQL', slot: 5, icon: '/skills/sql.png' },
-    { name: 'JavaScript', slot: 6, icon: '/skills/javascript.png' },
-    { name: 'React', slot: 7, icon: '/skills/react.png' },
-    { name: 'Node.js', slot: 8, icon: '/skills/nodejs.png' },
-    { name: 'API Int.', slot: 9, icon: '/skills/api.png' },
-    { name: 'Git', slot: 10, icon: '/skills/git.png' },
-    { name: 'JSON', slot: 11, icon: '/skills/json.png' },
-    { name: 'Trbshoot', slot: 12, icon: '/skills/troubleshoot.png' },
+    { name: 'UiPath', slot: 0, icon: '/My-Portfolio/skills/uipath.png' },
+    { name: 'RPA Dev', slot: 1, icon: '/My-Portfolio/skills/rpa.png' },
+    { name: 'C#', slot: 2, icon: '/My-Portfolio/skills/csharp.png' },
+    { name: 'VB.NET', slot: 3, icon: '/My-Portfolio/skills/vbnet.png' },
+    { name: 'Python', slot: 4, icon: '/My-Portfolio/skills/python.png' },
+    { name: 'SQL', slot: 5, icon: '/My-Portfolio/skills/sql.png' },
+    { name: 'JavaScript', slot: 6, icon: '/My-Portfolio/skills/javascript.png' },
+    { name: 'React', slot: 7, icon: '/My-Portfolio/skills/react.png' },
+    { name: 'Node.js', slot: 8, icon: '/My-Portfolio/skills/nodejs.png' },
+    { name: 'API Int.', slot: 9, icon: '/My-Portfolio/skills/api.png' },
+    { name: 'Git', slot: 10, icon: '/My-Portfolio/skills/git.png' },
+    { name: 'JSON', slot: 11, icon: '/My-Portfolio/skills/json.png' },
+    { name: 'Trbshoot', slot: 12, icon: '/My-Portfolio/skills/troubleshoot.png' },
 ];
 
 function About() {
@@ -37,16 +37,16 @@ function About() {
                             {/* 1. Armor Slots (Left Column) */}
                             <div className="armor-slots">
                                 <div className="armor-slot helmet">
-                                    <img src="/diamond_helmet.png" alt="Diamond Helmet" />
+                                    <img src="/My-Portfolio/diamond_helmet.png" alt="Diamond Helmet" />
                                 </div>
                                 <div className="armor-slot chestplate">
-                                    <img src="/diamond_chestplate.png" alt="Diamond Chestplate" />
+                                    <img src="/My-Portfolio/diamond_chestplate.png" alt="Diamond Chestplate" />
                                 </div>
                                 <div className="armor-slot leggings">
-                                    <img src="/diamond_leggings.png" alt="Diamond Leggings" />
+                                    <img src="/My-Portfolio/diamond_leggings.png" alt="Diamond Leggings" />
                                 </div>
                                 <div className="armor-slot boots">
-                                    <img src="/diamond_boots.png" alt="Diamond Boots" />
+                                    <img src="/My-Portfolio/diamond_boots.png" alt="Diamond Boots" />
                                 </div>
                             </div>
 
@@ -54,14 +54,14 @@ function About() {
                             <div className="character-content">
                                 <div className="character-preview">
                                     <div className="character-model">
-                                        <img src="/skin.png" alt="Character Skin" className="character-image" />
+                                        <img src="/My-Portfolio/skin.png" alt="Character Skin" className="character-image" />
                                     </div>
                                 </div>
                             </div>
 
                             {/* 3. Offhand Slot (Right Column) */}
                             <div className="offhand-slot">
-                                <img src="/coffee_mug.png" alt="Coffee Mug" />
+                                <img src="/My-Portfolio/coffee_mug.png" alt="Coffee Mug" />
                             </div>
                         </div>
                     </div>
