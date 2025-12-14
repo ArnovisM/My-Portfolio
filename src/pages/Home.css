@@ -8,24 +8,44 @@
     /* Center buttons horizontally */
 }
 
+h1.mc-logo {
+    font-size: 72px;
+    color: #b7b7b7;
+    text-shadow: 4px 4px 0px #3f3f3f;
+    margin-bottom: 0;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.logo-container {
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .splash-text {
     position: absolute;
-    top: 20%;
+    top: 36.5%;
     right: 15%;
     color: #ffff00;
     font-size: 20px;
     transform: rotate(-20deg);
     text-shadow: 2px 2px 0px #000;
     animation: splash-bounce 1s ease-in-out infinite alternate;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 10;
 }
 
 @keyframes splash-bounce {
     from {
-        transform: rotate(-20deg) translateY(0px);
+        transform: rotate(-20deg) translateY(-0.0078942px);
     }
 
     to {
-        transform: rotate(-20deg) translateY(-10px);
+        transform: rotate(-20deg) translateY(-9.99249px);
     }
 }
 
@@ -45,9 +65,50 @@
         font-size: 48px;
     }
 
-    .splash-text {
-        font-size: 16px;
-        top: 15%;
-        right: 10%;
+
+}
+
+
+.home-screen {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    /* Prevent scrollbars from absolute element */
+}
+
+.splash-text-v2 {
+    position: absolute;
+    /* Center it relative to the container first */
+    top: 48%;
+    left: 50%;
+    /* Rotate and offset to align with user request (k to E) */
+    transform: translate(-50%, -50%) rotate(-15deg);
+    color: #ffff00;
+    font-size: 24px;
+    text-shadow: 2px 2px 0px #000;
+    white-space: nowrap;
+    z-index: 10;
+    pointer-events: none;
+    /* Let clicks pass through to buttons */
+    /* Animation */
+    animation: splash-pulse 2s ease-in-out infinite;
+}
+
+@keyframes splash-pulse {
+    0% {
+        transform: translate(-50%, -50%) rotate(-15deg) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) rotate(-15deg) scale(1.05);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(-15deg) scale(1);
     }
 }

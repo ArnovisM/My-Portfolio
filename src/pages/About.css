@@ -324,7 +324,7 @@
         max-width: 100% !important;
         margin: 0 auto !important;
         margin-bottom: 2rem !important;
-        // margin-top: 40px !important; /* Removed to avoid excessive gaps with new padding */
+        /* margin-top: 40px !important; Removed to avoid excessive gaps with new padding */
 
         overflow-x: visible;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
